@@ -55,7 +55,7 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewAccessibilityDeleg
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // Request a random image from DogAPI
-        DogAPI.requestRandomImage(completionHandler: self.handleRandomImageResponse(imageData:error:))
+        DogAPI.requestRandomImage(breed: breeds[row], completionHandler: self.handleRandomImageResponse(imageData:error:))
     }
     
 }
